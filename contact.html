@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Christian for school projects, collaboration, or a friendly message.">
+    <title>Contact | Christian's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <p>For school projects, collaboration, or a friendly message</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="funfacts.html">Fun Facts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button type="button" class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle theme">☀️</button></li>
+            <li><button type="button" class="logout-btn" onclick="confirmLogout()">Logout</button></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="reveal">
+            <h2 class="page-title">Get In Touch</h2>
+            <p class="welcome-text">
+                Have a question, an idea for a project, or just want to get in touch?
+                Feel free to write me a message.
+            </p>
+
+            <div class="contact-layout">
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm" data-recipient="blanciachristianjay@gmail.com" onsubmit="return validateForm(event)">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="100" autocomplete="name" placeholder="Your name">
+                        <span id="nameError" class="error-msg" aria-live="polite"></span>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required maxlength="254" autocomplete="email" placeholder="your@email.com">
+                        <span id="emailError" class="error-msg" aria-live="polite"></span>
+
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required minlength="3" maxlength="150" placeholder="What is your message about?">
+                        <span id="subjectError" class="error-msg" aria-live="polite"></span>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="5000" placeholder="Write your message..."></textarea>
+                        <span id="messageError" class="error-msg" aria-live="polite"></span>
+
+                        <button type="submit">Open Email Draft</button>
+                        <p id="formStatus" class="form-status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <aside class="contact-details">
+                    <h3>Contact Information</h3>
+                    <p>
+                        <strong>Email</strong><br>
+                        <a href="mailto:blanciachristianjay@gmail.com">blanciachristianjay@gmail.com</a>
+                        <button type="button" id="copyEmailBtn" style="margin-left: 10px; padding: 4px 10px; font-size: 0.8rem; border-radius: 6px; border: 1px solid var(--border); background: var(--surface-2); color: var(--text); cursor: pointer;">
+                            Copy
+                        </button>
+                        <span id="copyFeedback" style="margin-left: 8px; font-size: 0.8rem; color: var(--accent);"></span>
+                    </p>
+                    <p><strong>Location</strong><br>Tibiao, Antique</p>
+                    <p><strong>Phone</strong><br>Available upon request.</p>
+                    <p>For school projects, collaboration, and other appropriate inquiries.</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <div class="footer-divider"></div>
+    <footer>
+        <p>Christian | Personal Portfolio</p>
+        <p>Quiet progress. Real growth.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Custom Styled Logout Modal -->
+<div id="logoutModal" class="custom-modal">
+    <div class="custom-modal-card">
+        <span class="modal-icon">👋</span>
+        <h3>Confirm Logout</h3>
+        <p>Are you sure you want to log out of your portfolio session?</p>
+        <div class="custom-modal-actions">
+            <button type="button" class="btn-cancel" onclick="closeLogoutModal()">Cancel</button>
+            <button type="button" class="btn-confirm" onclick="executeLogout()">Logout</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

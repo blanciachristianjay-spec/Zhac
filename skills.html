@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skills and learning journey of Christian, a BSIT student.">
+    <title>Skills | Christian's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Skills & Learning</h1>
+        <p>Building practical skills, one project at a time.</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="funfacts.html">Fun Facts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button type="button" class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle theme">☀️</button></li>
+            <li><button type="button" class="logout-btn" onclick="confirmLogout()">Logout</button></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="reveal">
+            <h2 class="page-title">What I'm Learning</h2>
+            <p class="welcome-text">
+                I'm building my foundations in web development and programming. 
+                These are skills I'm actively practicing through projects and consistent effort not claims of mastery.
+            </p>
+
+            <div class="feature-cards">
+                <article class="feature-card reveal">
+                    <div class="icon">🌐</div>
+                    <h3>HTML</h3>
+                    <p>Structuring web pages with semantic elements, links, forms, and images.</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="80%"></div>
+                    </div>
+                    <small>80%</small>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="icon">🎨</div>
+                    <h3>CSS</h3>
+                    <p>Improving layouts, colors, responsive design, and visual consistency.</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="75%"></div>
+                    </div>
+                    <small>75%</small>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="icon">⚙️</div>
+                    <h3>JavaScript</h3>
+                    <p>Practicing functions, events, validation, and interactive website features.</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="65%"></div>
+                    </div>
+                    <small>65%</small>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="icon">🧩</div>
+                    <h3>Problem Solving</h3>
+                    <p>Breaking tasks into smaller steps and learning from errors while coding.</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="70%"></div>
+                    </div>
+                    <small>70%</small>
+                </article>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <h2 class="page-title">How I Improve</h2>
+            <p><strong>Practice:</strong> Build small projects and try new features.</p>
+            <p><strong>Review:</strong> Revisit lessons and understand why the code works.</p>
+            <p><strong>Experiment:</strong> Test changes, debug mistakes, and refine the result.</p>
+        </section>
+    </main>
+
+    <div class="footer-divider"></div>
+    <footer>
+        <p>Christian | Personal Portfolio</p>
+        <p>Quiet progress. Real growth.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Custom Styled Logout Modal -->
+<div id="logoutModal" class="custom-modal">
+    <div class="custom-modal-card">
+        <span class="modal-icon">👋</span>
+        <h3>Confirm Logout</h3>
+        <p>Are you sure you want to log out of your portfolio session?</p>
+        <div class="custom-modal-actions">
+            <button type="button" class="btn-cancel" onclick="closeLogoutModal()">Cancel</button>
+            <button type="button" class="btn-confirm" onclick="executeLogout()">Logout</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

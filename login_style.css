@@ -1,0 +1,220 @@
+/* =========================================================
+   CHRISTIAN'S PERSONAL PORTFOLIO - LOGIN
+   Cute & Chill Cyberpunk Aesthetic
+   ========================================================= */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #0b0f19;
+    --surface: #121826;
+    --surface-2: #182234;
+    --text: #f0f4f8;
+    --text-muted: #94a3b8;
+    --accent: #f472b6;
+    --accent-strong: #ec4899;
+    --cute-purple: #c084fc;
+    --cute-mint: #2dd4bf;
+    --border: rgba(192, 132, 252, 0.2);
+    --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+body {
+    font-family: Inter, 'Segoe UI', system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 20px 16px;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(244, 114, 182, 0.12), transparent 30rem),
+        radial-gradient(circle at 90% 80%, rgba(192, 132, 252, 0.12), transparent 30rem),
+        var(--bg);
+    color: var(--text);
+}
+
+/* Card Container */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 36px 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    backdrop-filter: blur(16px);
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.spider-icon {
+    font-size: 38px;
+    display: block;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--cute-purple), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-container h2 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #ffffff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+}
+
+/* Form Controls */
+label {
+    display: block;
+    text-align: left;
+    margin: 12px 0 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface-2);
+    color: var(--text);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.15);
+}
+
+/* Toggle eye button inside password field */
+.toggle-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.toggle-eye:hover {
+    color: var(--text);
+}
+
+/* Submit Button */
+button#submitBtn {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+button#submitBtn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+button#submitBtn:active {
+    transform: translateY(0);
+}
+
+/* Error & Match Messages */
+#errorMessage {
+    color: #f87171;
+    font-size: 0.83rem;
+    margin-top: 12px;
+    min-height: 18px;
+}
+
+#passwordMatchMessage {
+    font-size: 0.8rem;
+    margin-top: 6px;
+    text-align: left;
+}
+
+/* Footer Link */
+#toggleText {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+#toggleText a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#toggleText a:hover {
+    text-decoration: underline;
+}
+
+/* Custom Styled Toast Notification */
+#loginToast {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-80px);
+    background: var(--surface-2);
+    border: 1px solid var(--cute-mint);
+    color: var(--text);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.35s ease, opacity 0.35s ease, visibility 0.35s ease;
+    z-index: 9999;
+    text-align: center;
+    max-width: 90%;
+}
+
+#loginToast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+#loginToast.error {
+    border-color: var(--accent-strong);
+    color: #f87171;
+}

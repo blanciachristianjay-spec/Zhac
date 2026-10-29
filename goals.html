@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals | Christian's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>My Goals</h1>
+        <p>What I want to achieve</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="funfacts.html">Fun Facts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button type="button" class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle theme">☀️</button></li>
+            <li><button type="button" class="logout-btn" onclick="confirmLogout()">Logout</button></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="reveal">
+            <h2 class="page-title">My Goals: Study, Build, Improve</h2>
+
+            <div class="goal-grid">
+                <div class="goal-card reveal" onclick="toggleDetails(this)">
+                    <div class="goal-header">Academic Excellence</div>
+                    <p>Understand my lessons instead of memorizing just for exams.</p>
+                    <div class="goal-details">
+                        Practice programming regularly, review class notes, and build small projects to apply what I learn.
+                    </div>
+                </div>
+
+                <div class="goal-card reveal" onclick="toggleDetails(this)">
+                    <div class="goal-header">Master Web Development</div>
+                    <p>Build responsive, clean, and useful websites.</p>
+                    <div class="goal-details">
+                        Strengthen my HTML, CSS, and JavaScript foundations before moving to more advanced tools.
+                    </div>
+                </div>
+
+                <div class="goal-card reveal" onclick="toggleDetails(this)">
+                    <div class="goal-header">Build a Strong Portfolio</div>
+                    <p>Turn what I learn into projects I can be proud of.</p>
+                    <div class="goal-details">
+                        Keep improving this portfolio and create projects that show both my skills and my growth.
+                    </div>
+                </div>
+
+                <div class="goal-card reveal" onclick="toggleDetails(this)">
+                    <div class="goal-header">Career Preparation</div>
+                    <p>Prepare for a future in IT while improving outside the classroom.</p>
+                    <div class="goal-details">
+                        Improve my resume, practice coding, and start building professional connections.
+                    </div>
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:18px; color:var(--text-muted); font-size:13px;">
+                Click a card to expand more details
+            </p>
+        </section>
+    </main>
+
+    <div class="footer-divider"></div>
+    <footer>
+        <p>Christian | Personal Portfolio</p>
+        <p>Quiet progress. Real growth.</p>
+    </footer>
+
+    <script src="script.js"></script>
+<!-- Custom Styled Logout Modal -->
+<div id="logoutModal" class="custom-modal">
+    <div class="custom-modal-card">
+        <span class="modal-icon">👋</span>
+        <h3>Confirm Logout</h3>
+        <p>Are you sure you want to log out of your portfolio session?</p>
+        <div class="custom-modal-actions">
+            <button type="button" class="btn-cancel" onclick="closeLogoutModal()">Cancel</button>
+            <button type="button" class="btn-confirm" onclick="executeLogout()">Logout</button>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>

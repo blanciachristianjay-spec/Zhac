@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts | Christian's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Fun Facts</h1>
+        <p>A few things about me</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="funfacts.html">Fun Facts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button type="button" class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle theme">☀️</button></li>
+            <li><button type="button" class="logout-btn" onclick="confirmLogout()">Logout</button></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="reveal">
+            <h2 class="page-title">Fun Facts About Me</h2>
+
+            <p class="welcome-text">
+                A little more about my interests, personality,
+                and the simple things that make me who I am.
+            </p>
+
+            <div class="goal-grid">
+                <div class="goal-card reveal zoomable-card">
+                    <img src="food.jpg" alt="Favorite food cooked by my father" class="funfact-image thumbnail" loading="lazy">
+                    <div class="goal-header">🍳 Favorite Food</div>
+                    <p>My favorite food is anything my father cooks for me. For me, it's not just about the food itself, but also the love and effort behind every meal.</p>
+                </div>
+
+                <div class="goal-card reveal zoomable-card">
+                    <img src="cat.jpg" alt="A white cat" class="funfact-image thumbnail" loading="lazy">
+                    <div class="goal-header">🐈 Cat Lover</div>
+                    <p>I love cats, especially white cats. There's something about their appearance and quiet charm that makes them extra special to me.</p>
+                </div>
+
+                <div class="goal-card reveal zoomable-card">
+                    <img src="manga.jpg" alt="Manga collection" class="funfact-image thumbnail" loading="lazy">
+                    <div class="goal-header">📚 Manga Reader</div>
+                    <p>I enjoy reading manga and manhua. I like getting immersed in different stories, discovering interesting characters, and exploring new worlds through reading.</p>
+                </div>
+
+                <div class="goal-card reveal zoomable-card">
+                    <img src="hobbies.jpg" alt="Gaming and personal hobbies" class="funfact-image thumbnail" loading="lazy">
+                    <div class="goal-header">🎮 Hobbies & Interests</div>
+                    <p>I enjoy Mobile Legends, anime, music, chess, technology, and working out. I like activities that challenge my mind, build my skills, and give me something new to learn.</p>
+                </div>
+
+                <div class="goal-card reveal zoomable-card">
+                    <img src="peace.jpg" alt="Definition of peace" class="funfact-image thumbnail" loading="lazy">
+                    <div class="goal-header">🌙 Peace & Privacy</div>
+                    <p>I value my peace and privacy, but I don't use them as an excuse to avoid genuine connections. I believe it's possible to protect your personal space while still welcoming meaningful relationships.</p>
+                </div>
+
+                <div class="goal-card reveal zoomable-card">
+                    <img src="mindset.jpg" alt="Enjoying life by the beach" class="funfact-image thumbnail" loading="lazy">
+                    <div class="goal-header">☁️ Quiet Happiness</div>
+                    <p>I've learned to enjoy my own company and appreciate life's little moments without needing to announce everything. Not every good experience needs an audience to be meaningful.</p>
+                </div>
+
+                <div class="goal-card reveal zoomable-card">
+                    <img src="color.jpg" alt="Black, white, and gray color palette" class="funfact-image thumbnail" loading="lazy">
+                    <div class="goal-header">⚫ Favorite Colors</div>
+                    <p>My preferred colors are black, white, and gray. I like their simple, timeless, and versatile look. They match the clean and understated style I prefer.</p>
+                </div>
+
+                <div class="goal-card reveal zoomable-card">
+                    <img src="plot.jpg" alt="Cat with motivational text" class="funfact-image thumbnail" loading="lazy">
+                    <div class="goal-header">🛠️ Always Improving</div>
+                    <p>I believe growth comes from consistency, experience, and learning from mistakes. I'm focused on improving myself, developing useful skills, and becoming a better version of who I am today.</p>
+                </div>
+
+                <div class="goal-card reveal zoomable-card">
+                    <img src="moment.jpg" alt="Live the moment written on car window" class="funfact-image thumbnail" loading="lazy">
+                    <div class="goal-header">✨ Simple Things Matter</div>
+                    <p>I appreciate the little things in life. Sometimes, a peaceful day, a good story, a favorite game, or a meal prepared with care can make an ordinary day feel special.</p>
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:16px; color:var(--text-muted); font-size:13px;">
+                Click any card to zoom in · Use ← → or Esc
+            </p>
+        </section>
+    </main>
+
+    <!-- Card Lightbox Popup -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-card-container">
+            <img id="lightboxImage" alt="Enlarged fun fact image">
+            <div id="lightboxTitle" class="lightbox-title"></div>
+            <div id="lightboxText" class="lightbox-text"></div>
+        </div>
+        <span class="lightbox-prev" onclick="changeImage(-1)">❮</span>
+        <span class="lightbox-next" onclick="changeImage(1)">❯</span>
+    </div>
+
+    <div class="footer-divider"></div>
+    <footer>
+        <p>Christian | Personal Portfolio</p>
+        <p>Quiet progress. Real growth.</p>
+    </footer>
+
+    <script src="script.js"></script>
+<!-- Custom Styled Logout Modal -->
+<div id="logoutModal" class="custom-modal">
+    <div class="custom-modal-card">
+        <span class="modal-icon">👋</span>
+        <h3>Confirm Logout</h3>
+        <p>Are you sure you want to log out of your portfolio session?</p>
+        <div class="custom-modal-actions">
+            <button type="button" class="btn-cancel" onclick="closeLogoutModal()">Cancel</button>
+            <button type="button" class="btn-confirm" onclick="executeLogout()">Logout</button>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>

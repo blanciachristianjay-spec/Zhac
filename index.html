@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Christian's personal portfolio: learning, interests, goals, and growth as a BSIT student.">
+    <title>Home | Christian's Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Christian | Personal Portfolio</h1>
+        <p>Quiet progress. Real growth. A life built with purpose.</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="funfacts.html">Fun Facts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button type="button" class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle theme">☀️</button></li>
+            <li><button type="button" class="logout-btn" onclick="confirmLogout()">Logout</button></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="reveal">
+            <h2 class="page-title">Welcome to My World</h2>
+            <p class="welcome-text">
+                Hi, I'm Christian, a BSIT student at the University of Antique.
+                I'm interested in technology, problem-solving, and building skills
+                that will help me create useful things. This portfolio shares what
+                I'm learning, what keeps me motivated, and the person I'm working to become.
+            </p>
+
+            <div class="feature-cards">
+                <a class="feature-card reveal" href="skills.html" style="text-decoration:none">
+                    <div class="icon" aria-hidden="true">⌘</div>
+                    <h3>Skills</h3>
+                    <p>Learning HTML, CSS, JavaScript, and programming fundamentals one project at a time.</p>
+                </a>
+                <a class="feature-card reveal" href="goals.html" style="text-decoration:none">
+                    <div class="icon" aria-hidden="true">↗</div>
+                    <h3>Goals</h3>
+                    <p>Building practical IT skills while staying curious, disciplined, and open to learning.</p>
+                </a>
+                <a class="feature-card reveal" href="funfacts.html" style="text-decoration:none">
+                    <div class="icon" aria-hidden="true">✳</div>
+                    <h3>Fun Facts</h3>
+                    <p>Discover my interests in gaming, anime, chess, reading, and fitness.</p>
+                </a>
+                <a class="feature-card reveal" href="gallery.html" style="text-decoration:none">
+                    <div class="icon" aria-hidden="true">▧</div>
+                    <h3>Gallery</h3>
+                    <p>A collection of memories, experiences, and moments worth keeping.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <h2 class="page-title">About Me</h2>
+            <div class="about-profile-wrapper">
+                <div class="profile-avatar-container">
+                    <!-- Replace zhac.jpg with your edited profile image filename if needed -->
+                    <img src="zhac.jpg" alt="Christian's profile photo" class="profile-avatar">
+                    <div class="status-badge">
+                        <span class="status-dot"></span> Learning
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm a BSIT student who enjoys technology, learning new things,
+                        and challenging myself. Outside class, I spend time playing
+                        Mobile Legends, watching anime, reading manhua, playing chess,
+                        and working out. I value consistency over quick results and
+                        believe mistakes are part of getting better. I keep things low-key
+                        and focus on what matters: learning useful skills, building
+                        discipline, and becoming a stronger version of myself.
+                    </p>
+
+                    <div class="cute-badges">
+                        <span class="tag-badge">🎮 Mobile Legends</span>
+                        <span class="tag-badge">♟️ Chess</span>
+                        <span class="tag-badge">📚 Manhua</span>
+                        <span class="tag-badge">💪 Fitness</span>
+                        <span class="tag-badge">💻 Web Dev</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <h2 class="page-title">My Interests</h2>
+            <p><strong>Technology:</strong> Exploring programming, web development, and different areas of IT.</p>
+            <p><strong>Gaming:</strong> Playing Mobile Legends and improving my game knowledge and skills.</p>
+            <p><strong>Fitness:</strong> Working out to develop strength, discipline, and consistency.</p>
+            <p><strong>Learning:</strong> Reading, solving problems, playing chess, and discovering new ideas.</p>
+        </section>
+
+        <section class="reveal">
+            <h2 class="page-title">My Personal Motto</h2>
+            <p class="welcome-text">
+                <span class="typing-text">“Quietly becoming who I'm meant to be.”</span>
+            </p>
+            <p>
+                I don't believe every step needs an audience. Some of the best
+                progress happens quietly through daily effort, patience,
+                self-discipline, and learning from experience.
+            </p>
+        </section>
+    </main>
+
+    <div class="footer-divider"></div>
+    <footer>
+        <p>Christian | Personal Portfolio</p>
+        <p>Quiet progress. Real growth.</p>
+    </footer>
+
+    <script src="script.js"></script>
+<!-- Custom Styled Logout Modal -->
+<div id="logoutModal" class="custom-modal">
+    <div class="custom-modal-card">
+        <span class="modal-icon">👋</span>
+        <h3>Confirm Logout</h3>
+        <p>Are you sure you want to log out of your portfolio session?</p>
+        <div class="custom-modal-actions">
+            <button type="button" class="btn-cancel" onclick="closeLogoutModal()">Cancel</button>
+            <button type="button" class="btn-confirm" onclick="executeLogout()">Logout</button>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>

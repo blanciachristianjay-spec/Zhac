@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Christian's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Gallery</h1>
+        <p>Some of my photos</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="funfacts.html">Fun Facts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button type="button" class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle theme">☀️</button></li>
+            <li><button type="button" class="logout-btn" onclick="confirmLogout()">Logout</button></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="reveal">
+            <h2 class="page-title">My Gallery</h2>
+
+            <div class="gallery">
+                <img src="zhac8.jpg" class="thumbnail" alt="Christian sitting on a bench at night" loading="lazy">
+                <img src="zhac4.jpg" class="thumbnail" alt="Casual outdoor portrait in denim jacket" loading="lazy">
+                <img src="4man.jpg" class="thumbnail" alt="Group photo with friends in school uniforms" loading="lazy">
+                <img src="5man.jpg" class="thumbnail" alt="Group photo with classmates posing" loading="lazy">
+                <img src="zhac.jpg" class="thumbnail" alt="Portrait by the sea wearing black" loading="lazy">
+                <img src="zhac7.jpg" class="thumbnail" alt="At a waterfall in the forest" loading="lazy">
+            </div>
+            <p style="text-align:center; margin-top:16px; color:var(--text-muted); font-size:13px;">
+                Click any photo to open the lightbox · Use ← → or Esc
+            </p>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightboxImage" alt="Enlarged gallery image">
+        <span class="lightbox-prev" onclick="changeImage(-1)">❮</span>
+        <span class="lightbox-next" onclick="changeImage(1)">❯</span>
+    </div>
+
+    <div class="footer-divider"></div>
+    <footer>
+        <p>Christian | Personal Portfolio</p>
+        <p>Quiet progress. Real growth.</p>
+    </footer>
+
+    <script src="script.js"></script>
+ <!-- Custom Styled Logout Modal -->
+<div id="logoutModal" class="custom-modal">
+    <div class="custom-modal-card">
+        <span class="modal-icon">👋</span>
+        <h3>Confirm Logout</h3>
+        <p>Are you sure you want to log out of your portfolio session?</p>
+        <div class="custom-modal-actions">
+            <button type="button" class="btn-cancel" onclick="closeLogoutModal()">Cancel</button>
+            <button type="button" class="btn-confirm" onclick="executeLogout()">Logout</button>
+        </div>
+    </div>
+</div>
+   
+</body>
+</html>
